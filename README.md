@@ -1,5 +1,3 @@
-A simple wrapper for portage &amp; paludis
-
 <h1 align="center">
   evolve
 </h1>
