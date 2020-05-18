@@ -13,8 +13,7 @@
 </p>
 
 ## Requirements
-* Nim
-Unix OS with Any of:
+* Nim and any Unix OS with Any of:
 * Yay
 * Pacman
 * Paludis
