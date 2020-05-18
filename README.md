@@ -18,8 +18,7 @@ Unix OS with Any of:
 * Yay
 * Pacman
 * Paludis
-* Portage
-  - Layman
+* Portage & Layman
 
 ## Installation Instruction
 ```bash
