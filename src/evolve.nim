@@ -5,10 +5,14 @@
 -------------------------------------------------------------------------------------
 ]#
 
-import strformat, os, osproc
+from os import commandLineParams, execShellCmd
+from strformat import fmt
+from osproc import execProcess
 
-#var programName: string = "evolve"
-#var programVersion: float32 = 0.1
+#[
+var programName: string = "evolve"
+var programVersion: float32 = 0.1
+]#
 let arguments = commandLineParams()
 
 
@@ -30,6 +34,7 @@ commands:
     resolve  :  Install Packages
   autosolve  :  Auto Unmasks Packages (Gentoo Only)
      vanish  :  Uninstall Packages
+     search  :  To search for packages
         fly  :  Updates/Upgrades the system's Packages
         add  :  Add/Install repository [paludis & gentoo(layman) only] 
         del  :  Removes/Uninstalls repository [paludis & gentoo(layman) only]
@@ -39,6 +44,7 @@ Examples:
     evolve resolve <package-name>
   evolve autosolve <package-name>
      evolve vanish <package-name>
+     evolve search <package-name>
         evolve add <repository-name>
         evolve del <repository-name>
         evolve sync
@@ -116,6 +122,23 @@ try:
         of "paludis":
             for arg in arguments[1..^1]:
                 discard execShellCmd(fmt"cave uninstall {arg}")
+        else:
+            discard die(c=9090, "")
+
+    of "search":
+        case package_manager:
+        of "yay":
+            for arg in arguments[1..^1]:
+                discard execShellCmd(fmt"yay -Ss {arg}")
+        of "pacman":
+            for arg in arguments[1..^1]:
+                discard execShellCmd(fmt"pacman -Ss {arg}")
+        of "portage":
+            for arg in arguments[1..^1]:
+                discard execShellCmd(fmt"emerge -S {arg}")
+        of "paludis":
+            for arg in arguments[1..^1]:
+                discard execShellCmd(fmt"cave-search {arg}")
         else:
             discard die(c=9090, "")
 
