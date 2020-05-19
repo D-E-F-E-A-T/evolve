@@ -24,7 +24,9 @@
 $ git clone https://github.com/Uniminin/evolve
 $ cd evolve
 $ make
-$ make install (needs superuser acess, i.e do 'sudo make install') 
+$ make update (optional)
+$ make install (needs superuser acess, i.e do 'sudo make install')
+% make uninstall (needs superuser acess, i.e do 'sudo make uninstall')
 ```
 
 ## License :scroll:
