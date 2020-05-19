@@ -1,7 +1,7 @@
 #[
 -------------------------------------------------------------------------------------
 |  Created by Angel Uniminin <uniminin@zoho.com> in 2020 under the terms of AGPLv3  |
-|                          Last Updated on 18th May, 2020                           |
+|                          Last Updated on 19th May, 2020                           |
 -------------------------------------------------------------------------------------
 ]#
 
@@ -112,7 +112,7 @@ try:
                 discard execShellCmd(fmt"pacman -R {arg}")
         of "portage":
             for arg in arguments[1..^1]:
-                discard execShellCmd(fmt"emerge -C {arg}")
+                discard execShellCmd(fmt"emerge -aC {arg}")
         of "paludis":
             for arg in arguments[1..^1]:
                 discard execShellCmd(fmt"cave uninstall {arg}")
