@@ -159,7 +159,7 @@ try:
         case package_manager:
         of "paludis":
             for arg in arguments[1..^1]:
-                discard execShellCmd("cave resolve repository/{arg}")
+                discard execShellCmd("cave resolve -x1 repository/{arg}")
         of "portage":
             for arg in arguments[1..^1]:
                 discard execShellCmd("layman -a {arg}")
