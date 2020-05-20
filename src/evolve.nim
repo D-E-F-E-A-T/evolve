@@ -160,33 +160,31 @@ try:
         of "paludis":
             for arg in arguments[1..^1]:
                 discard execShellCmd("cave resolve repository/{arg}")
-
         of "portage":
             for arg in arguments[1..^1]:
                 discard execShellCmd("layman -a {arg}")
-        discard die(c=9090, "")
+        else:
+            discard die(c=9090, "")
 
     of "del":
         case package_manager:
         of "paludis":
             for arg in arguments[1..^1]:
                 discard execShellCmd("cave uninstall repository/{arg}")
-
         of "portage":
             for arg in arguments[1..^1]:
                 discard execShellCmd("layman -d {arg}")
-        discard die(c=9090, "")
+        else:
+            discard die(c=9090, "")
 
     of "sync":
         case package_manager:
         of "paludis":
             discard execShellCmd("cave sync")
-
         of "portage":
             discard execShellCmd("emerge --sync ; layman -S")
         else:
             discard die(c=9090, "")
-
     else:
         echo unknownArgument
     
