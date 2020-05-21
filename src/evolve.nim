@@ -54,7 +54,7 @@ Supports:
     Yay AUR Helper
     Pacman Package Manager
     Paludis Package Manager
-    Portage Package Manager
+    Portage Package Manager & Layman
 """
 
 
