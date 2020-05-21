@@ -138,7 +138,7 @@ try:
                 discard execShellCmd(fmt"emerge -S {arg}")
         of "paludis":
             for arg in arguments[1..^1]:
-                discard execShellCmd(fmt"cave-search {arg}")
+                discard execShellCmd(fmt"cave search --name {arg}")
         else:
             discard die(c=9090, "")
 
