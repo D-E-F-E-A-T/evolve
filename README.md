@@ -23,8 +23,8 @@
 ```bash
 $ git clone https://github.com/Uniminin/evolve
 $ cd evolve
+$ make update (optional, skip if you just cloned this repo)
 $ make
-$ make update (optional)
 $ make install (needs superuser acess, i.e 'sudo/doas make install')
 $ make uninstall (needs superuser acess, i.e 'sudo/doas make uninstall')
 ```
