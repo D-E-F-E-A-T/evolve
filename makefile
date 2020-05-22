@@ -10,3 +10,6 @@ install:
 uninstall:
 	if [ -f /usr/bin/evolve ]; then rm -f /usr/bin/evolve; fi
 	
+clean:
+	if [ -f src/evolve ]; then rm -f src/evolve; fi
+	
