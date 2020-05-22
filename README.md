@@ -23,10 +23,11 @@
 ```bash
 $ git clone https://github.com/Uniminin/evolve
 $ cd evolve
-$ make update (optional, skip if you just cloned this repo)
+$ make update (*optional. skip if you've just cloned this repository.)
 $ make
 $ make install (needs superuser acess, i.e 'sudo/doas make install')
 $ make uninstall (needs superuser acess, i.e 'sudo/doas make uninstall')
+$ make clean (*optional. To clean compiled binary.)
 ```
 
 ## License :scroll:
