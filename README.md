@@ -20,7 +20,7 @@
 * Portage & Layman
 
 ## Installation Instruction
-```bash
+```
 $ git clone https://github.com/Uniminin/evolve
 $ cd evolve
 $ make update (*optional. skip if you've just cloned this repository.)
