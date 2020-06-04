@@ -1,5 +1,5 @@
 evolve: 
-	src/evolve.nim ; nim c src/evolve.nim
+	nim c src/evolve.nim
 	
 update:
 	git pull
